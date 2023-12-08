@@ -1,0 +1,29 @@
+<span>User = user</span>
+<span>-------------</span>
+<span>password = 123</span>
+<mat-card>
+
+  <form [formGroup]="form">
+
+    <div [hidden]="true">
+      <mat-form-field class="container">
+        <mat-label>ID</mat-label>
+        <input matInput type="text" placeholder="ID" formControlName="id">
+      </mat-form-field>
+    </div>
+
+    <mat-form-field class="container">
+      <mat-label>Usuario</mat-label>
+      <input matInput type="text" placeholder="User" formControlName="username">
+    </mat-form-field>
+
+    <mat-form-field class="container">
+      <mat-label>Contraseña</mat-label>
+      <input matInput type="password" placeholder="Password" formControlName="password">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="login()" [disabled]="form.invalid"> Login </button>
+  </form>
+
+</mat-card>
+
